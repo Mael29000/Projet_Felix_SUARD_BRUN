@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.1 on win32)" generated="20220407 11:57:49.160" rpa="false" schemaversion="3">
+<suite id="s1" name="Felix test cu" source="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Felix_test_cu.robot">
+<kw name="Exécution Camix" library="Felix_test_cu" type="SETUP">
+<kw name="Start Process" library="Process">
+<arg>java</arg>
+<arg>-jar</arg>
+<arg>SUT/Camix-0.4.3.jar</arg>
+<arg>alias=Camix</arg>
+<doc>Starts a new process on background.</doc>
+<msg timestamp="20220407 11:57:49.698" level="INFO">Starting process:
+java -jar SUT/Camix-0.4.3.jar</msg>
+<status status="PASS" starttime="20220407 11:57:49.698" endtime="20220407 11:57:49.703"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:57:51.712" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:57:49.703" endtime="20220407 11:57:51.712"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:49.698" endtime="20220407 11:57:51.713"/>
+</kw>
+<test id="s1-t1" name="Entrer dans le chat" line="20">
+<kw name="Entrer dans le chat">
+<kw name="L'utilisateur lance l'exécution du composant Felix" library="Felix_test_cu">
+<kw name="Start Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<arg>java -jar SUT/Felix-0.4.3.jar</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+        The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<msg timestamp="20220407 11:57:51.716" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115751.remoteswinglibrary.out"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:57:51.716" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115751.remoteswinglibrary.err"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:57:51.716" level="INFO">-javaagent:"C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\RobotFramework\remoteswinglibrary-2.3.0.jar"=127.0.0.1:59583</msg>
+<msg timestamp="20220407 11:57:51.716" level="INFO">Java version &gt; 9: True</msg>
+<msg timestamp="20220407 11:57:51.720" level="INFO">Starting process:
+java -jar SUT/Felix-0.4.3.jar</msg>
+<msg timestamp="20220407 11:57:54.467" level="INFO">connecting to started application at 127.0.0.1:59584</msg>
+<msg timestamp="20220407 11:57:54.468" level="INFO">waiting for api at 127.0.0.1:59584</msg>
+<msg timestamp="20220407 11:57:54.800" level="INFO">api is ready</msg>
+<msg timestamp="20220407 11:57:54.800" level="INFO">connected to started application at 127.0.0.1:59584</msg>
+<msg timestamp="20220407 11:57:54.801" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<status status="PASS" starttime="20220407 11:57:51.715" endtime="20220407 11:57:54.801"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:57:56.807" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:57:54.802" endtime="20220407 11:57:56.807"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:51.715" endtime="20220407 11:57:56.808"/>
+</kw>
+<kw name="Felix affiche la vue connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:57:56.808" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:57:56.808" endtime="20220407 11:57:56.808"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:56.808" endtime="20220407 11:57:56.808"/>
+</kw>
+<kw name="L'utilisateur demande à se connecter" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:57:56.809" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:57:56.809" endtime="20220407 11:57:56.809"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:56.808" endtime="20220407 11:57:56.809"/>
+</kw>
+<kw name="Felix affiche un message de connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:57:56.810" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:57:56.810" endtime="20220407 11:57:56.810"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:56.809" endtime="20220407 11:57:56.810"/>
+</kw>
+<kw name="Felix initie la connexion à Camix" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:57:56.810" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:57:56.810" endtime="20220407 11:57:56.811"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:56.810" endtime="20220407 11:57:56.811"/>
+</kw>
+<kw name="Camix inscrit l'utilisateur dans le canal par défaut (place publique)" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:57:56.811" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:57:56.811" endtime="20220407 11:57:56.811"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:56.811" endtime="20220407 11:57:56.811"/>
+</kw>
+<kw name="Camix informe les composants Felix des autres utilisateurs inscrits dans le canal par défaut que l'utilisateur arrive dans le chat" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:57:56.811" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:57:56.811" endtime="20220407 11:57:56.811"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:56.811" endtime="20220407 11:57:56.811"/>
+</kw>
+<kw name="Chaque composant Felix concerné affiche un message d'arrivé de l'utilisateur dans le chat" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:57:56.812" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:57:56.812" endtime="20220407 11:57:56.812"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:56.811" endtime="20220407 11:57:56.812"/>
+</kw>
+<kw name="Camix transmet au composant Felix de l'utilisateur un message d'accueil dans le chat" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:57:56.813" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:57:56.812" endtime="20220407 11:57:56.813"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:56.812" endtime="20220407 11:57:56.813"/>
+</kw>
+<kw name="Felix ferme la vue connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:57:56.813" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:57:56.813" endtime="20220407 11:57:56.813"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:56.813" endtime="20220407 11:57:56.813"/>
+</kw>
+<kw name="Felix affiche la vue chat" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:57:56.814" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:57:56.814" endtime="20220407 11:57:56.814"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:56.813" endtime="20220407 11:57:56.814"/>
+</kw>
+<kw name="Felix affiche un message d'accueil dans le chat" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:57:56.814" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:57:56.814" endtime="20220407 11:57:56.814"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:56.814" endtime="20220407 11:57:56.814"/>
+</kw>
+<kw name="Arrêt Felix" library="Felix_test_cu" type="TEARDOWN">
+<kw name="Switch To Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+        The application is identified using the ``alias``.
+        Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" starttime="20220407 11:57:56.815" endtime="20220407 11:57:56.815"/>
+</kw>
+<kw name="System Exit" library="RemoteSwingLibrary">
+<doc> Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<msg timestamp="20220407 11:57:59.555" level="INFO">Connection died as expected</msg>
+<msg timestamp="20220407 11:57:59.555" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20220407 11:57:59.556" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20220407 11:57:56.815" endtime="20220407 11:57:59.556"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:58:01.564" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:57:59.556" endtime="20220407 11:58:01.564"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:56.815" endtime="20220407 11:58:01.566"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:51.714" endtime="20220407 11:58:01.566"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:51.713" endtime="20220407 11:58:01.566"/>
+</test>
+<test id="s1-t2" name="Entrer dans le chat [modification de l'IP][modification du port]" line="23">
+<kw name="Entrer dans le chat [modification de l'IP][modification du port]">
+<arg>${IP_CAMIX}</arg>
+<arg>${UNCHANGED}</arg>
+<kw name="L'utilisateur lance l'exécution du composant Felix" library="Felix_test_cu">
+<kw name="Start Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<arg>java -jar SUT/Felix-0.4.3.jar</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+        The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<msg timestamp="20220407 11:58:01.570" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115801.remoteswinglibrary.out"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:58:01.570" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115801.remoteswinglibrary.err"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:58:01.570" level="INFO">-javaagent:"C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\RobotFramework\remoteswinglibrary-2.3.0.jar"=127.0.0.1:59583</msg>
+<msg timestamp="20220407 11:58:01.570" level="INFO">Java version &gt; 9: True</msg>
+<msg timestamp="20220407 11:58:01.574" level="INFO">Starting process:
+java -jar SUT/Felix-0.4.3.jar</msg>
+<msg timestamp="20220407 11:58:04.136" level="INFO">connecting to started application at 127.0.0.1:59589</msg>
+<msg timestamp="20220407 11:58:04.136" level="INFO">waiting for api at 127.0.0.1:59589</msg>
+<msg timestamp="20220407 11:58:04.224" level="INFO">api is ready</msg>
+<msg timestamp="20220407 11:58:04.224" level="INFO">connected to started application at 127.0.0.1:59589</msg>
+<msg timestamp="20220407 11:58:04.225" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<status status="PASS" starttime="20220407 11:58:01.569" endtime="20220407 11:58:04.225"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:58:06.235" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:58:04.225" endtime="20220407 11:58:06.236"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:01.569" endtime="20220407 11:58:06.236"/>
+</kw>
+<kw name="Felix affiche la vue connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:06.237" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:06.237" endtime="20220407 11:58:06.237"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:06.236" endtime="20220407 11:58:06.237"/>
+</kw>
+<kw name="L'utilisateur modifie l'adresse IP" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:06.239" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:06.238" endtime="20220407 11:58:06.239"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:06.237" endtime="20220407 11:58:06.239"/>
+</kw>
+<kw name="L'utilisateur modifie le port" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:06.240" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:06.239" endtime="20220407 11:58:06.240"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:06.239" endtime="20220407 11:58:06.240"/>
+</kw>
+<kw name="Felix affiche un message de connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:06.241" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:06.241" endtime="20220407 11:58:06.241"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:06.240" endtime="20220407 11:58:06.242"/>
+</kw>
+<kw name="Felix initie la connexion à Camix" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:06.242" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:06.242" endtime="20220407 11:58:06.243"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:06.242" endtime="20220407 11:58:06.243"/>
+</kw>
+<kw name="Arrêt Felix" library="Felix_test_cu" type="TEARDOWN">
+<kw name="Switch To Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+        The application is identified using the ``alias``.
+        Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" starttime="20220407 11:58:06.244" endtime="20220407 11:58:06.244"/>
+</kw>
+<kw name="System Exit" library="RemoteSwingLibrary">
+<doc> Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<msg timestamp="20220407 11:58:08.967" level="INFO">Connection died as expected</msg>
+<msg timestamp="20220407 11:58:08.967" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20220407 11:58:08.968" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20220407 11:58:06.244" endtime="20220407 11:58:08.969"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:58:10.974" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:58:08.969" endtime="20220407 11:58:10.974"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:06.243" endtime="20220407 11:58:10.975"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:01.568" endtime="20220407 11:58:10.975"/>
+</kw>
+<kw name="Entrer dans le chat [modification de l'IP][modification du port]">
+<arg>${UNCHANGED}</arg>
+<arg>${PORT_CAMIX}</arg>
+<kw name="L'utilisateur lance l'exécution du composant Felix" library="Felix_test_cu">
+<kw name="Start Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<arg>java -jar SUT/Felix-0.4.3.jar</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+        The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<msg timestamp="20220407 11:58:10.978" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115810.remoteswinglibrary.out"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:58:10.978" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115810.remoteswinglibrary.err"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:58:10.978" level="INFO">-javaagent:"C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\RobotFramework\remoteswinglibrary-2.3.0.jar"=127.0.0.1:59583</msg>
+<msg timestamp="20220407 11:58:10.978" level="INFO">Java version &gt; 9: True</msg>
+<msg timestamp="20220407 11:58:10.981" level="INFO">Starting process:
+java -jar SUT/Felix-0.4.3.jar</msg>
+<msg timestamp="20220407 11:58:13.557" level="INFO">connecting to started application at 127.0.0.1:59597</msg>
+<msg timestamp="20220407 11:58:13.557" level="INFO">waiting for api at 127.0.0.1:59597</msg>
+<msg timestamp="20220407 11:58:13.652" level="INFO">api is ready</msg>
+<msg timestamp="20220407 11:58:13.652" level="INFO">connected to started application at 127.0.0.1:59597</msg>
+<msg timestamp="20220407 11:58:13.653" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<status status="PASS" starttime="20220407 11:58:10.977" endtime="20220407 11:58:13.653"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:58:15.655" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:58:13.654" endtime="20220407 11:58:15.655"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:10.976" endtime="20220407 11:58:15.655"/>
+</kw>
+<kw name="Felix affiche la vue connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:15.657" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:15.656" endtime="20220407 11:58:15.657"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:15.656" endtime="20220407 11:58:15.657"/>
+</kw>
+<kw name="L'utilisateur modifie l'adresse IP" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:15.658" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:15.657" endtime="20220407 11:58:15.658"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:15.657" endtime="20220407 11:58:15.658"/>
+</kw>
+<kw name="L'utilisateur modifie le port" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:15.659" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:15.659" endtime="20220407 11:58:15.659"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:15.658" endtime="20220407 11:58:15.659"/>
+</kw>
+<kw name="Felix affiche un message de connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:15.660" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:15.660" endtime="20220407 11:58:15.660"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:15.659" endtime="20220407 11:58:15.660"/>
+</kw>
+<kw name="Felix initie la connexion à Camix" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:15.661" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:15.661" endtime="20220407 11:58:15.661"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:15.660" endtime="20220407 11:58:15.661"/>
+</kw>
+<kw name="Arrêt Felix" library="Felix_test_cu" type="TEARDOWN">
+<kw name="Switch To Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+        The application is identified using the ``alias``.
+        Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" starttime="20220407 11:58:15.662" endtime="20220407 11:58:15.662"/>
+</kw>
+<kw name="System Exit" library="RemoteSwingLibrary">
+<doc> Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<msg timestamp="20220407 11:58:18.386" level="INFO">Connection died as expected</msg>
+<msg timestamp="20220407 11:58:18.386" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20220407 11:58:18.387" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20220407 11:58:15.662" endtime="20220407 11:58:18.387"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:58:20.390" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:58:18.387" endtime="20220407 11:58:20.390"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:15.661" endtime="20220407 11:58:20.390"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:10.975" endtime="20220407 11:58:20.390"/>
+</kw>
+<kw name="Entrer dans le chat [modification de l'IP][modification du port]">
+<arg>${IP_CAMIX}</arg>
+<arg>${PORT_CAMIX}</arg>
+<kw name="L'utilisateur lance l'exécution du composant Felix" library="Felix_test_cu">
+<kw name="Start Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<arg>java -jar SUT/Felix-0.4.3.jar</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+        The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<msg timestamp="20220407 11:58:20.393" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115820.remoteswinglibrary.out"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:58:20.393" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115820.remoteswinglibrary.err"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:58:20.394" level="INFO">-javaagent:"C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\RobotFramework\remoteswinglibrary-2.3.0.jar"=127.0.0.1:59583</msg>
+<msg timestamp="20220407 11:58:20.394" level="INFO">Java version &gt; 9: True</msg>
+<msg timestamp="20220407 11:58:20.397" level="INFO">Starting process:
+java -jar SUT/Felix-0.4.3.jar</msg>
+<msg timestamp="20220407 11:58:22.973" level="INFO">connecting to started application at 127.0.0.1:59603</msg>
+<msg timestamp="20220407 11:58:22.973" level="INFO">waiting for api at 127.0.0.1:59603</msg>
+<msg timestamp="20220407 11:58:23.067" level="INFO">api is ready</msg>
+<msg timestamp="20220407 11:58:23.067" level="INFO">connected to started application at 127.0.0.1:59603</msg>
+<msg timestamp="20220407 11:58:23.068" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<status status="PASS" starttime="20220407 11:58:20.392" endtime="20220407 11:58:23.069"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:58:25.078" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:58:23.069" endtime="20220407 11:58:25.078"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:20.392" endtime="20220407 11:58:25.080"/>
+</kw>
+<kw name="Felix affiche la vue connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:25.081" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:25.080" endtime="20220407 11:58:25.081"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:25.080" endtime="20220407 11:58:25.081"/>
+</kw>
+<kw name="L'utilisateur modifie l'adresse IP" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:25.082" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:25.082" endtime="20220407 11:58:25.082"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:25.081" endtime="20220407 11:58:25.082"/>
+</kw>
+<kw name="L'utilisateur modifie le port" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:25.083" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:25.082" endtime="20220407 11:58:25.083"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:25.082" endtime="20220407 11:58:25.083"/>
+</kw>
+<kw name="Felix affiche un message de connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:25.083" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:25.083" endtime="20220407 11:58:25.084"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:25.083" endtime="20220407 11:58:25.084"/>
+</kw>
+<kw name="Felix initie la connexion à Camix" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:25.084" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:25.084" endtime="20220407 11:58:25.084"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:25.084" endtime="20220407 11:58:25.085"/>
+</kw>
+<kw name="Arrêt Felix" library="Felix_test_cu" type="TEARDOWN">
+<kw name="Switch To Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+        The application is identified using the ``alias``.
+        Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" starttime="20220407 11:58:25.085" endtime="20220407 11:58:25.085"/>
+</kw>
+<kw name="System Exit" library="RemoteSwingLibrary">
+<doc> Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<msg timestamp="20220407 11:58:27.820" level="INFO">Connection died as expected</msg>
+<msg timestamp="20220407 11:58:27.820" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20220407 11:58:27.821" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20220407 11:58:25.086" endtime="20220407 11:58:27.821"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:58:29.835" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:58:27.821" endtime="20220407 11:58:29.835"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:25.085" endtime="20220407 11:58:29.835"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:20.390" endtime="20220407 11:58:29.835"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:01.567" endtime="20220407 11:58:29.836"/>
+</test>
+<test id="s1-t3" name="Entrer dans le chat [connexion impossible]" line="29">
+<kw name="Entrer dans le chat [connexion impossible]">
+<arg>127.0.0.1</arg>
+<arg>${UNCHANGED}</arg>
+<kw name="L'utilisateur lance l'exécution du composant Felix" library="Felix_test_cu">
+<kw name="Start Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<arg>java -jar SUT/Felix-0.4.3.jar</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+        The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<msg timestamp="20220407 11:58:29.839" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115829.remoteswinglibrary.out"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:58:29.839" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115829.remoteswinglibrary.err"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:58:29.840" level="INFO">-javaagent:"C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\RobotFramework\remoteswinglibrary-2.3.0.jar"=127.0.0.1:59583</msg>
+<msg timestamp="20220407 11:58:29.840" level="INFO">Java version &gt; 9: True</msg>
+<msg timestamp="20220407 11:58:29.843" level="INFO">Starting process:
+java -jar SUT/Felix-0.4.3.jar</msg>
+<msg timestamp="20220407 11:58:32.414" level="INFO">connecting to started application at 127.0.0.1:59608</msg>
+<msg timestamp="20220407 11:58:32.414" level="INFO">waiting for api at 127.0.0.1:59608</msg>
+<msg timestamp="20220407 11:58:32.511" level="INFO">api is ready</msg>
+<msg timestamp="20220407 11:58:32.511" level="INFO">connected to started application at 127.0.0.1:59608</msg>
+<msg timestamp="20220407 11:58:32.512" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<status status="PASS" starttime="20220407 11:58:29.839" endtime="20220407 11:58:32.512"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:58:34.527" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:58:32.512" endtime="20220407 11:58:34.527"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:29.838" endtime="20220407 11:58:34.527"/>
+</kw>
+<kw name="Felix affiche la vue connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:34.527" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:34.527" endtime="20220407 11:58:34.528"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:34.527" endtime="20220407 11:58:34.528"/>
+</kw>
+<kw name="L'utilisateur demande à se connecter" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:34.528" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:34.528" endtime="20220407 11:58:34.528"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:34.528" endtime="20220407 11:58:34.528"/>
+</kw>
+<kw name="Felix affiche un message de connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:34.529" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:34.528" endtime="20220407 11:58:34.529"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:34.528" endtime="20220407 11:58:34.529"/>
+</kw>
+<kw name="Felix initie la connexion à Camix" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:34.529" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:34.529" endtime="20220407 11:58:34.529"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:34.529" endtime="20220407 11:58:34.529"/>
+</kw>
+<kw name="Felix affiche un message de connexion impossible. Va en 3" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:34.530" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:34.530" endtime="20220407 11:58:34.530"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:34.529" endtime="20220407 11:58:34.530"/>
+</kw>
+<kw name="Arrêt Felix" library="Felix_test_cu" type="TEARDOWN">
+<kw name="Switch To Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+        The application is identified using the ``alias``.
+        Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" starttime="20220407 11:58:34.530" endtime="20220407 11:58:34.530"/>
+</kw>
+<kw name="System Exit" library="RemoteSwingLibrary">
+<doc> Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<msg timestamp="20220407 11:58:37.260" level="INFO">Connection died as expected</msg>
+<msg timestamp="20220407 11:58:37.260" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20220407 11:58:37.261" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20220407 11:58:34.530" endtime="20220407 11:58:37.261"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:58:39.265" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:58:37.261" endtime="20220407 11:58:39.265"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:34.530" endtime="20220407 11:58:39.266"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:29.837" endtime="20220407 11:58:39.266"/>
+</kw>
+<kw name="Entrer dans le chat [connexion impossible]">
+<arg>${UNCHANGED}</arg>
+<arg>12345</arg>
+<kw name="L'utilisateur lance l'exécution du composant Felix" library="Felix_test_cu">
+<kw name="Start Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<arg>java -jar SUT/Felix-0.4.3.jar</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+        The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<msg timestamp="20220407 11:58:39.268" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115839.remoteswinglibrary.out"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:58:39.268" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115839.remoteswinglibrary.err"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:58:39.268" level="INFO">-javaagent:"C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\RobotFramework\remoteswinglibrary-2.3.0.jar"=127.0.0.1:59583</msg>
+<msg timestamp="20220407 11:58:39.268" level="INFO">Java version &gt; 9: True</msg>
+<msg timestamp="20220407 11:58:39.272" level="INFO">Starting process:
+java -jar SUT/Felix-0.4.3.jar</msg>
+<msg timestamp="20220407 11:58:41.852" level="INFO">connecting to started application at 127.0.0.1:59615</msg>
+<msg timestamp="20220407 11:58:41.852" level="INFO">waiting for api at 127.0.0.1:59615</msg>
+<msg timestamp="20220407 11:58:41.946" level="INFO">api is ready</msg>
+<msg timestamp="20220407 11:58:41.946" level="INFO">connected to started application at 127.0.0.1:59615</msg>
+<msg timestamp="20220407 11:58:41.947" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<status status="PASS" starttime="20220407 11:58:39.267" endtime="20220407 11:58:41.947"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:58:43.957" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:58:41.947" endtime="20220407 11:58:43.958"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:39.267" endtime="20220407 11:58:43.958"/>
+</kw>
+<kw name="Felix affiche la vue connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:43.959" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:43.959" endtime="20220407 11:58:43.959"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:43.958" endtime="20220407 11:58:43.959"/>
+</kw>
+<kw name="L'utilisateur demande à se connecter" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:43.960" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:43.960" endtime="20220407 11:58:43.960"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:43.959" endtime="20220407 11:58:43.960"/>
+</kw>
+<kw name="Felix affiche un message de connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:43.961" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:43.961" endtime="20220407 11:58:43.961"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:43.960" endtime="20220407 11:58:43.961"/>
+</kw>
+<kw name="Felix initie la connexion à Camix" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:43.962" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:43.962" endtime="20220407 11:58:43.962"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:43.961" endtime="20220407 11:58:43.962"/>
+</kw>
+<kw name="Felix affiche un message de connexion impossible. Va en 3" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:43.963" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:43.963" endtime="20220407 11:58:43.963"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:43.963" endtime="20220407 11:58:43.963"/>
+</kw>
+<kw name="Arrêt Felix" library="Felix_test_cu" type="TEARDOWN">
+<kw name="Switch To Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+        The application is identified using the ``alias``.
+        Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" starttime="20220407 11:58:43.964" endtime="20220407 11:58:43.964"/>
+</kw>
+<kw name="System Exit" library="RemoteSwingLibrary">
+<doc> Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<msg timestamp="20220407 11:58:46.682" level="INFO">Connection died as expected</msg>
+<msg timestamp="20220407 11:58:46.682" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20220407 11:58:46.683" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20220407 11:58:43.965" endtime="20220407 11:58:46.683"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:58:48.687" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:58:46.683" endtime="20220407 11:58:48.687"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:43.964" endtime="20220407 11:58:48.689"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:39.266" endtime="20220407 11:58:48.689"/>
+</kw>
+<kw name="Entrer dans le chat [connexion impossible]">
+<arg>127.0.0.1</arg>
+<arg>12345</arg>
+<kw name="L'utilisateur lance l'exécution du composant Felix" library="Felix_test_cu">
+<kw name="Start Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<arg>java -jar SUT/Felix-0.4.3.jar</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+        The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<msg timestamp="20220407 11:58:48.691" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115848.remoteswinglibrary.out"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:58:48.691" level="INFO" html="true">&lt;a href="C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\Report\20220407115848.remoteswinglibrary.err"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg timestamp="20220407 11:58:48.692" level="INFO">-javaagent:"C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\RobotFramework\remoteswinglibrary-2.3.0.jar"=127.0.0.1:59583</msg>
+<msg timestamp="20220407 11:58:48.692" level="INFO">Java version &gt; 9: True</msg>
+<msg timestamp="20220407 11:58:48.695" level="INFO">Starting process:
+java -jar SUT/Felix-0.4.3.jar</msg>
+<msg timestamp="20220407 11:58:51.257" level="INFO">connecting to started application at 127.0.0.1:59620</msg>
+<msg timestamp="20220407 11:58:51.257" level="INFO">waiting for api at 127.0.0.1:59620</msg>
+<msg timestamp="20220407 11:58:51.357" level="INFO">api is ready</msg>
+<msg timestamp="20220407 11:58:51.357" level="INFO">connected to started application at 127.0.0.1:59620</msg>
+<msg timestamp="20220407 11:58:51.357" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<status status="PASS" starttime="20220407 11:58:48.690" endtime="20220407 11:58:51.358"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:58:53.369" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:58:51.358" endtime="20220407 11:58:53.369"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:48.690" endtime="20220407 11:58:53.369"/>
+</kw>
+<kw name="Felix affiche la vue connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:53.370" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:53.370" endtime="20220407 11:58:53.370"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:53.369" endtime="20220407 11:58:53.370"/>
+</kw>
+<kw name="L'utilisateur demande à se connecter" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:53.371" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:53.371" endtime="20220407 11:58:53.371"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:53.371" endtime="20220407 11:58:53.371"/>
+</kw>
+<kw name="Felix affiche un message de connexion" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:53.373" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:53.373" endtime="20220407 11:58:53.373"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:53.373" endtime="20220407 11:58:53.373"/>
+</kw>
+<kw name="Felix initie la connexion à Camix" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:53.375" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:53.374" endtime="20220407 11:58:53.375"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:53.374" endtime="20220407 11:58:53.375"/>
+</kw>
+<kw name="Felix affiche un message de connexion impossible. Va en 3" library="Felix_test_cu">
+<kw name="Log" library="BuiltIn">
+<arg>TODO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220407 11:58:53.376" level="INFO">TODO</msg>
+<status status="PASS" starttime="20220407 11:58:53.375" endtime="20220407 11:58:53.376"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:53.375" endtime="20220407 11:58:53.376"/>
+</kw>
+<kw name="Arrêt Felix" library="Felix_test_cu" type="TEARDOWN">
+<kw name="Switch To Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+        The application is identified using the ``alias``.
+        Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" starttime="20220407 11:58:53.377" endtime="20220407 11:58:53.377"/>
+</kw>
+<kw name="System Exit" library="RemoteSwingLibrary">
+<doc> Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<msg timestamp="20220407 11:58:56.106" level="INFO">Connection died as expected</msg>
+<msg timestamp="20220407 11:58:56.106" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20220407 11:58:56.107" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20220407 11:58:53.377" endtime="20220407 11:58:56.107"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:58:58.122" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:58:56.108" endtime="20220407 11:58:58.123"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:53.376" endtime="20220407 11:58:58.123"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:48.689" endtime="20220407 11:58:58.123"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:29.837" endtime="20220407 11:58:58.123"/>
+</test>
+<kw name="Arrêt Camix" library="Felix_test_cu" type="TEARDOWN">
+<kw name="Terminate Process" library="Process">
+<arg>Camix</arg>
+<doc>Stops the process gracefully or forcefully.</doc>
+<msg timestamp="20220407 11:58:58.125" level="INFO">Gracefully terminating process.</msg>
+<msg timestamp="20220407 11:58:58.128" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20220407 11:58:58.125" endtime="20220407 11:58:58.128"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220407 11:59:00.143" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220407 11:58:58.128" endtime="20220407 11:59:00.143"/>
+</kw>
+<status status="PASS" starttime="20220407 11:58:58.125" endtime="20220407 11:59:00.143"/>
+</kw>
+<status status="PASS" starttime="20220407 11:57:49.162" endtime="20220407 11:59:00.144"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Felix test cu">Felix test cu</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

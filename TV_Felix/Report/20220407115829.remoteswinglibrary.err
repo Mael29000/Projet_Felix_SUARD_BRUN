@@ -1,0 +1,15 @@
+Picked up JAVA_TOOL_OPTIONS: -Duser.language=en -Duser.country=US -javaagent:"C:\Users\donov\Documents\cours\FIL1\qualité logicielle et méthode agile\Projet_Felix_SUARD_BRUN\TV_Felix\RobotFramework\remoteswinglibrary-2.3.0.jar"=127.0.0.1:59583 --add-exports=java.desktop/sun.awt=ALL-UNNAMED
+Picked up _JAVA_OPTIONS: -Djava.security.policy="C:\Users\donov\AppData\Local\Temp\grant_all_27oi_qts.policy"
+2022-04-07 11:58:32.128:INFO::AWT-EventQueue-0: Logging initialized @2204ms to org.eclipse.jetty.util.log.StdErrLog
+Apr 07, 2022 11:58:32 AM org.robotframework.remoteserver.RemoteServer putLibrary
+INFO: Mapped path /RPC2 to library org.robotframework.swing.SwingLibrary.
+Apr 07, 2022 11:58:32 AM org.robotframework.remoteserver.RemoteServer putLibrary
+INFO: Mapped path /services to library org.robotframework.remoteswinglibrary.agent.ServicesLibrary.
+Apr 07, 2022 11:58:32 AM org.robotframework.remoteserver.RemoteServer start
+INFO: Robot Framework remote server starting
+2022-04-07 11:58:32.251:INFO:oejs.Server:AWT-EventQueue-0: jetty-9.4.31.v20200723; built: 2020-07-23T17:57:36.812Z; git: 450ba27947e13e66baa8cd1ce7e85a4461cacc1d; jvm 17.0.1+12-LTS-39
+2022-04-07 11:58:32.302:INFO:oejsh.ContextHandler:AWT-EventQueue-0: Started o.e.j.s.ServletContextHandler@73bd783f{/,null,AVAILABLE}
+2022-04-07 11:58:32.393:INFO:oejs.AbstractConnector:AWT-EventQueue-0: Started ServerConnector@1e7800f6{HTTP/1.1, (http/1.1)}{0.0.0.0:59608}
+2022-04-07 11:58:32.393:INFO:oejs.Server:AWT-EventQueue-0: Started @2470ms
+Apr 07, 2022 11:58:32 AM org.robotframework.remoteserver.RemoteServer start
+INFO: Robot Framework remote server started on port 0.
