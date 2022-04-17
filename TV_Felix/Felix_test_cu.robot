@@ -28,9 +28,9 @@ Entrer dans le chat [modification de l'IP][modification du port]
 
 Entrer dans le chat [connexion impossible]
     [Template]  Entrer dans le chat [connexion impossible]
-    127.0.0.1       ${UNCHANGED}
-    ${UNCHANGED}    12345
-    127.0.0.1       12345
+    192.168.1.1       ${UNCHANGED}
+    ${UNCHANGED}      420
+    192.168.1.1       420
 
 
 *** Keywords ***
@@ -79,9 +79,9 @@ Entrer dans le chat [modification de l'IP][modification du port]
     #2	
     Felix affiche la vue connexion
     #3.a
-    L'utilisateur modifie l'adresse IP
+    L'utilisateur modifie l'adresse IP  ${ip}
     #3.b
-    L'utilisateur modifie le port
+    L'utilisateur modifie le port   ${port}
     #4
     Felix affiche un message de connexion
     #5

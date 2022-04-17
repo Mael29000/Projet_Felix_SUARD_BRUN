@@ -8,6 +8,8 @@ ${IP_CAMIX}     127.0.0.1
 ${PORT_CAMIX}   12345
 ${EMPTY}
 ${UNCHANGED}
+${MSG_CONNEXION}    Connexion au chat @${IP_CAMIX}:${PORT_CAMIX}
+${MSG_CONNEXION_IMPOSSIBLE}     impossible
 
 *** Keywords ***
 
@@ -32,13 +34,15 @@ Arrêt Felix
     Sleep   1s
 
 Felix affiche la vue connexion
-    Log     TODO
+    Window Should Be Open    Connexion
 
 L'utilisateur demande à se connecter
-    Log     TODO
+    Select Window    Connexion
+    Push Button    Connexion
 
 Felix affiche un message de connexion
-    Log     TODO
+    Select Window    Connexion
+    Assert Text Field Value    Information    ${MSG_CONNEXION}
 
 Felix initie la connexion à Camix
     Log     TODO
@@ -59,7 +63,7 @@ Felix ferme la vue connexion
     Log     TODO
 
 Felix affiche la vue chat
-    Log     TODO
+    Window Should Be Open    Chat
 
 Felix affiche un message d'accueil dans le chat
     Log     TODO
@@ -71,10 +75,22 @@ Les vues initiales sont correctement initialisées
     Log     TODO
 
 L'utilisateur modifie l'adresse IP
-    Log     TODO
+    [Arguments]    ${ip}
+    Select Window    Connexion
+    Insert Into Text Field    IP    ${ip}
 
 L'utilisateur modifie le port
-    Log     TODO
+    [Arguments]    ${port}
+    Select Window    Connexion
+    Insert Into Text Field    Port    ${port}
 
 Felix affiche un message de connexion impossible. Va en 3
-    Log     TODO
+    [Arguments]    ${ip}    ${port}
+    Select Window    Connexion
+    Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${ip}:${port} ${MSG_CONNEXION_IMPOSSIBLE}
+
+
+Assert Text Field Value
+    [Arguments]    ${textfield}    ${expectedValue}
+    ${value} =    Get Text Field Value    ${textfield}
+    Should Be Equal As Strings    ${value}    ${expectedValue}
