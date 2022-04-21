@@ -33,6 +33,16 @@ Entrer dans le chat [connexion impossible]
     192.168.1.1       420
 
 
+#### TEST TEMPORAIRE -> A SUPPRIMER AVANT DE RENDRE ####
+Test d'un test
+    [Teardown]  Arrêt Felix
+    L'utilisateur lance l'exécution du composant Felix
+    Felix affiche la vue connexion
+    L'utilisateur modifie l'adresse IP  localhost
+    L'utilisateur modifie le port   4442443
+#### FIN TEST TEMPORAIRE ####
+
+
 *** Keywords ***
 
 Entrer dans le chat 
@@ -44,17 +54,17 @@ Entrer dans le chat
     # 3. 
     L'utilisateur demande à se connecter
     # 4. 
-    Felix affiche un message de connexion
+    Felix affiche un message de connexion   ${IP_CAMIX}   ${PORT_CAMIX}
     # 5. 
-    Felix initie la connexion à Camix
+    #Felix initie la connexion à Camix
     # 6. 
-    Camix inscrit l'utilisateur dans le canal par défaut (place publique)
+    #Camix inscrit l'utilisateur dans le canal par défaut (place publique)
     # 7. 
-    Camix informe les composants Felix des autres utilisateurs inscrits dans le canal par défaut que l'utilisateur arrive dans le chat
+    #Camix informe les composants Felix des autres utilisateurs inscrits dans le canal par défaut que l'utilisateur arrive dans le chat
     # 8. 
-    Chaque composant Felix concerné affiche un message d'arrivé de l'utilisateur dans le chat
+    #Chaque composant Felix concerné affiche un message d'arrivé de l'utilisateur dans le chat
     # 9. 
-    Camix transmet au composant Felix de l'utilisateur un message d'accueil dans le chat
+    #Camix transmet au composant Felix de l'utilisateur un message d'accueil dans le chat
     # 10.
     Felix ferme la vue connexion
     # 11. 
@@ -66,7 +76,7 @@ Entrer dans le chat (smoke test)
     [Tags]  smoke
     [Teardown]  Arrêt Felix
     #1
-    L'utilisateur lance l'éxecution du composant Felix
+    L'utilisateur lance l'exécution du composant Felix
     #2
     Felix affiche ses vues initiales
     Les vues initiales sont correctement initialisées
@@ -82,10 +92,12 @@ Entrer dans le chat [modification de l'IP][modification du port]
     L'utilisateur modifie l'adresse IP  ${ip}
     #3.b
     L'utilisateur modifie le port   ${port}
+    # tmp
+    L'utilisateur demande à se connecter
     #4
-    Felix affiche un message de connexion
+    Felix affiche un message de connexion   ${ip}   ${port}
     #5
-    Felix initie la connexion à Camix
+    #Felix initie la connexion à Camix
 
 Entrer dans le chat [connexion impossible]
     [Arguments]     ${ip}   ${port}
@@ -94,11 +106,15 @@ Entrer dans le chat [connexion impossible]
     L'utilisateur lance l'exécution du composant Felix
     # 2. 
     Felix affiche la vue connexion
+    #tmp
+    L'utilisateur modifie l'adresse IP  ${ip}
+    #tmp
+    L'utilisateur modifie le port   ${port}
     # 3. 
     L'utilisateur demande à se connecter
     # 4. 
-    Felix affiche un message de connexion
+    Felix affiche un message de connexion   ${ip}   ${port}
     # 5. 
-    Felix initie la connexion à Camix
+    #Felix initie la connexion à Camix
     # 6.a 
-    Felix affiche un message de connexion impossible. Va en 3
+    Felix affiche un message de connexion impossible. Va en 3   ${ip}   ${port}

@@ -8,13 +8,10 @@ ${IP_CAMIX}     127.0.0.1
 ${PORT_CAMIX}   12345
 ${EMPTY}
 ${UNCHANGED}
-${MSG_CONNEXION}    Connexion au chat @${IP_CAMIX}:${PORT_CAMIX}
+${MSG_CONNEXION}    Connexion au chat @
 ${MSG_CONNEXION_IMPOSSIBLE}     impossible
 
 *** Keywords ***
-
-Entrer dans le chat
-    Log     TODO
 
 Exécution Camix
     Start Process   java    -jar    SUT/Camix-0.4.3.jar     alias=Camix
@@ -41,8 +38,20 @@ L'utilisateur demande à se connecter
     Push Button    Connexion
 
 Felix affiche un message de connexion
-    Select Window    Connexion
-    Assert Text Field Value    Information    ${MSG_CONNEXION}
+    [Arguments]    ${ip}    ${port}
+    IF  "${ip}" != "${UNCHANGED}" and "${port}" != "${UNCHANGED}"
+        Select Window    Connexion
+        Assert Text Field Value    Information    ${MSG_CONNEXION}${ip}:${port}
+   ELSE IF  "${ip}" != "${UNCHANGED}" and "${port}" == "${UNCHANGED}"
+        Select Window    Connexion
+        Assert Text Field Value    Information    ${MSG_CONNEXION}${ip}:${PORT_CAMIX}
+    ELSE IF  "${ip}" == "${UNCHANGED}" and "${port}" != "${UNCHANGED}"
+        Select Window    Connexion
+        Assert Text Field Value    Information    ${MSG_CONNEXION}${IP_CAMIX}:${port}
+    ELSE IF  "${ip}" == "${UNCHANGED}" and "${port}" == "${UNCHANGED}"
+        Select Window    Connexion
+        Assert Text Field Value    Information    ${MSG_CONNEXION}${IP_CAMIX}:${PORT_CAMIX}
+    END
 
 Felix initie la connexion à Camix
     Log     TODO
@@ -76,19 +85,34 @@ Les vues initiales sont correctement initialisées
 
 L'utilisateur modifie l'adresse IP
     [Arguments]    ${ip}
-    Select Window    Connexion
-    Insert Into Text Field    IP    ${ip}
+    IF  "${ip}" != "${UNCHANGED}"
+        Select Window    Connexion
+        Insert Into Text Field    IP    ${ip}
+    END
 
 L'utilisateur modifie le port
     [Arguments]    ${port}
-    Select Window    Connexion
-    Insert Into Text Field    Port    ${port}
+    IF  "${port}" != "${UNCHANGED}"
+        Select Window    Connexion
+        Insert Into Text Field    Port    ${port}
+    END
 
 Felix affiche un message de connexion impossible. Va en 3
+    # TODO Bug -> j'ai l'impression qu'il prend pas les bonnes valeurs -> peut-être le "delay" que l'on impose qui le fait regarder les valeurs trop tard ?
     [Arguments]    ${ip}    ${port}
-    Select Window    Connexion
-    Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${ip}:${port} ${MSG_CONNEXION_IMPOSSIBLE}
-
+    IF  "${ip}" != "${UNCHANGED}" and "${port}" != "${UNCHANGED}"
+        Select Window    Connexion
+        Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${ip}:${port} ${MSG_CONNEXION_IMPOSSIBLE}
+    ELSE IF  "${ip}" != "${UNCHANGED}" and "${port}" == "${UNCHANGED}"
+        Select Window    Connexion
+        Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${ip}:${PORT_CAMIX} ${MSG_CONNEXION_IMPOSSIBLE}
+    ELSE IF  "${ip}" == "${UNCHANGED}" and "${port}" != "${UNCHANGED}"
+        Select Window    Connexion
+        Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${IP_CAMIX}:${port} ${MSG_CONNEXION_IMPOSSIBLE}
+    ELSE IF  "${ip}" == "${UNCHANGED}" and "${port}" == "${UNCHANGED}"
+        Select Window    Connexion
+        Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${IP_CAMIX}:${PORT_CAMIX} ${MSG_CONNEXION_IMPOSSIBLE}
+    END
 
 Assert Text Field Value
     [Arguments]    ${textfield}    ${expectedValue}
