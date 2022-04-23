@@ -42,7 +42,7 @@ Felix affiche un message de connexion
     IF  "${ip}" != "${UNCHANGED}" and "${port}" != "${UNCHANGED}"
         Select Window    Connexion
         Assert Text Field Value    Information    ${MSG_CONNEXION}${ip}:${port}
-   ELSE IF  "${ip}" != "${UNCHANGED}" and "${port}" == "${UNCHANGED}"
+    ELSE IF  "${ip}" != "${UNCHANGED}" and "${port}" == "${UNCHANGED}"
         Select Window    Connexion
         Assert Text Field Value    Information    ${MSG_CONNEXION}${ip}:${PORT_CAMIX}
     ELSE IF  "${ip}" == "${UNCHANGED}" and "${port}" != "${UNCHANGED}"
@@ -87,14 +87,18 @@ L'utilisateur modifie l'adresse IP
     [Arguments]    ${ip}
     IF  "${ip}" != "${UNCHANGED}"
         Select Window    Connexion
-        Insert Into Text Field    IP    ${ip}
+        Clear Text Field    IP
+        Type Into Text Field    IP    ${ip}
+        Sleep   1s
     END
 
 L'utilisateur modifie le port
     [Arguments]    ${port}
     IF  "${port}" != "${UNCHANGED}"
         Select Window    Connexion
-        Insert Into Text Field    Port    ${port}
+        Clear Text Field    Port
+        Type Into Text Field    Port    ${port}
+        Sleep   1s
     END
 
 Felix affiche un message de connexion impossible. Va en 3
@@ -102,16 +106,24 @@ Felix affiche un message de connexion impossible. Va en 3
     [Arguments]    ${ip}    ${port}
     IF  "${ip}" != "${UNCHANGED}" and "${port}" != "${UNCHANGED}"
         Select Window    Connexion
-        Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${ip}:${port} ${MSG_CONNEXION_IMPOSSIBLE}
+        Sleep   4s
+        Assert Text Field Value    Information    Connexion au chat @${ip}:${port} ${MSG_CONNEXION_IMPOSSIBLE}
+        #Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${ip}:${port} ${MSG_CONNEXION_IMPOSSIBLE}
     ELSE IF  "${ip}" != "${UNCHANGED}" and "${port}" == "${UNCHANGED}"
         Select Window    Connexion
-        Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${ip}:${PORT_CAMIX} ${MSG_CONNEXION_IMPOSSIBLE}
+        Sleep   4s
+        Assert Text Field Value    Information    Connexion au chat @${ip}:${PORT_CAMIX} ${MSG_CONNEXION_IMPOSSIBLE}
+        #Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${ip}:${PORT_CAMIX} ${MSG_CONNEXION_IMPOSSIBLE}
     ELSE IF  "${ip}" == "${UNCHANGED}" and "${port}" != "${UNCHANGED}"
         Select Window    Connexion
-        Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${IP_CAMIX}:${port} ${MSG_CONNEXION_IMPOSSIBLE}
+        Sleep   4s
+        Assert Text Field Value    Information    Connexion au chat @${IP_CAMIX}:${port} ${MSG_CONNEXION_IMPOSSIBLE}
+        #Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${IP_CAMIX}:${port} ${MSG_CONNEXION_IMPOSSIBLE}
     ELSE IF  "${ip}" == "${UNCHANGED}" and "${port}" == "${UNCHANGED}"
         Select Window    Connexion
-        Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${IP_CAMIX}:${PORT_CAMIX} ${MSG_CONNEXION_IMPOSSIBLE}
+        Sleep   4s
+        Assert Text Field Value    Information    Connexion au chat @${IP_CAMIX}:${PORT_CAMIX} ${MSG_CONNEXION_IMPOSSIBLE}
+        #Wait Until Keyword Succeeds    2x    500ms    Assert Text Field Value    Information    Connexion au chat @${IP_CAMIX}:${PORT_CAMIX} ${MSG_CONNEXION_IMPOSSIBLE}
     END
 
 Assert Text Field Value

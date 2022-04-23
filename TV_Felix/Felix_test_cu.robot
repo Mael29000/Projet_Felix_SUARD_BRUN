@@ -17,6 +17,9 @@ ${MESSAGE_ACCUEIL}
 
 *** Test Cases ***
 
+Entrer dans le chat (smoke test)
+    Entrer dans le chat (smoke test)
+
 Entrer dans le chat 
     Entrer dans le chat 
 
@@ -32,15 +35,19 @@ Entrer dans le chat [connexion impossible]
     ${UNCHANGED}      420
     192.168.1.1       420
 
+Entrer dans le chat [connexion impossible puis nouvelle tentative réussie]
+    [Template]  Entrer dans le chat [connexion impossible puis nouvelle tentative réussie]
+    192.168.1.1       420
 
-#### TEST TEMPORAIRE -> A SUPPRIMER AVANT DE RENDRE ####
-Test d'un test
-    [Teardown]  Arrêt Felix
-    L'utilisateur lance l'exécution du composant Felix
-    Felix affiche la vue connexion
-    L'utilisateur modifie l'adresse IP  localhost
-    L'utilisateur modifie le port   4442443
-#### FIN TEST TEMPORAIRE ####
+Entrer dans le chat [port trop long]
+    [Template]  Entrer dans le chat [port trop long]
+    111
+    1111
+    11111
+    111111
+
+Entrer dans le chat [changement de l'ip et du port pendant la connexion]
+    Entrer dans le chat [changement de l'ip et du port pendant la connexion]
 
 
 *** Keywords ***
@@ -113,8 +120,47 @@ Entrer dans le chat [connexion impossible]
     # 3. 
     L'utilisateur demande à se connecter
     # 4. 
-    Felix affiche un message de connexion   ${ip}   ${port}
+    #Felix affiche un message de connexion   ${ip}   ${port}
     # 5. 
     #Felix initie la connexion à Camix
     # 6.a 
     Felix affiche un message de connexion impossible. Va en 3   ${ip}   ${port}
+
+Entrer dans le chat [connexion impossible puis nouvelle tentative réussie]
+    [Teardown]  Arrêt Felix
+    [Arguments]     ${ip}   ${port}
+    # 1.
+    L'utilisateur lance l'exécution du composant Felix
+    # 2.
+    Felix affiche la vue connexion
+    #tmp
+    L'utilisateur modifie l'adresse IP  ${ip}
+    #tmp
+    L'utilisateur modifie le port   ${port}
+    # 3.
+    L'utilisateur demande à se connecter
+    Felix affiche un message de connexion impossible. Va en 3   ${ip}   ${port}
+
+Entrer dans le chat [port trop long]
+    [Teardown]  Arrêt Felix
+    [Arguments]     ${port}
+    # 1.
+    L'utilisateur lance l'exécution du composant Felix
+    # 2.
+    Felix affiche la vue connexion
+    #tmp
+    L'utilisateur modifie le port   ${port}
+    # 3.
+    L'utilisateur demande à se connecter
+    Felix affiche un message de connexion impossible. Va en 3   ${UNCHANGED}   ${port}
+
+Entrer dans le chat [changement de l'ip et du port pendant la connexion]
+    [Teardown]  Arrêt Felix
+    L'utilisateur lance l'exécution du composant Felix
+    Felix affiche la vue connexion
+    L'utilisateur modifie l'adresse IP  localhost
+    L'utilisateur modifie le port   420
+    L'utilisateur demande à se connecter
+    L'utilisateur modifie l'adresse IP  ${IP_CAMIX}
+    L'utilisateur modifie le port   ${PORT_CAMIX}
+    felix affiche un message de connexion impossible. va en 3    localhost   420
