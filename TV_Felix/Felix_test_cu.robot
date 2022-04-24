@@ -80,57 +80,61 @@ Entrer dans le chat [modification de l'IP][modification du port]
     L'utilisateur modifie l'adresse IP  ${ip}
     #3.b
     L'utilisateur modifie le port   ${port}
-    #4
+    #3
     L'utilisateur demande à se connecter
-    #5
+    #4
     Felix affiche un message de connexion   ${ip}   ${port}
-    #5
+    #6
     Felix affiche la vue chat
 
 
 Entrer dans le chat [connexion impossible]
     [Arguments]     ${ip}   ${port}
     [Teardown]  Arrêt Felix
-    # 1. 
+    #1
     L'utilisateur lance l'exécution du composant Felix
-    # 2. 
+    #2
     Felix affiche la vue connexion
-    #tmp
+    #3.a
     L'utilisateur modifie l'adresse IP  ${ip}
-    #tmp
+    #3.b
     L'utilisateur modifie le port   ${port}
-    # 3. 
+    #3
     L'utilisateur demande à se connecter
-    # 4. 
+    #4
     Felix affiche un message de connexion   ${ip}   ${port}
-    # 6.a 
+    #4.a
     Felix affiche un message de connexion impossible. Va en 3   ${ip}   ${port}
 
 
 Entrer dans le chat [connexion impossible puis nouvelle tentative réussie]
     [Teardown]  Arrêt Felix
     [Arguments]     ${ip}   ${port}
-    # 1.
+    #1
     L'utilisateur lance l'exécution du composant Felix
-    # 2.
+    #2
     Felix affiche la vue connexion
-    #
+    #3.a
     L'utilisateur modifie l'adresse IP  ${ip}
-    #
+    #3.b
     L'utilisateur modifie le port   ${port}
-    #
+    #3
     L'utilisateur demande à se connecter
-    #
+    #4
+    Felix affiche un message de connexion   ${ip}   ${port}
+    #4.a
     Felix affiche un message de connexion impossible. Va en 3   ${ip}   ${port}
-    #
+    #3.a
     L'utilisateur modifie l'adresse IP  ${IP_CAMIX}
-    #
+    #3.b
     L'utilisateur modifie le port   ${PORT_CAMIX}
-    #
+    #3
     L'utilisateur demande à se connecter
-    #
+    #4
     Felix affiche un message de connexion   ${IP_CAMIX}   ${PORT_CAMIX}
-    #
+    #5
+    Felix ferme la vue connexion
+    #6
     Felix affiche la vue chat
 
 
@@ -141,30 +145,30 @@ Entrer dans le chat [longueur du port]
     L'utilisateur lance l'exécution du composant Felix
     #2
     Felix affiche la vue connexion
-    #
+    #3.b
     L'utilisateur modifie le port   ${port}
-    #
+    #3
     L'utilisateur demande à se connecter
-    #
+    #4.a
     Felix affiche un message de connexion impossible. Va en 3   ${UNCHANGED}   ${port}
 
 
 Entrer dans le chat [changement de l'ip et du port pendant la connexion]
     [Teardown]  Arrêt Felix
     [Arguments]     ${ip}   ${port}
-    #
+    #1
     L'utilisateur lance l'exécution du composant Felix
-    #
+    #2
     Felix affiche la vue connexion
-    #
+    #3.a
     L'utilisateur modifie l'adresse IP  ${ip}
-    #
+    #3.b
     L'utilisateur modifie le port   ${port}
-    #
+    #3
     L'utilisateur demande à se connecter
-    #
+    #3.a
     L'utilisateur modifie l'adresse IP  ${IP_CAMIX}
-    #
+    #3.b
     L'utilisateur modifie le port   ${PORT_CAMIX}
-    #
+    #4.a
     felix affiche un message de connexion impossible. va en 3    ${ip}   ${port}
